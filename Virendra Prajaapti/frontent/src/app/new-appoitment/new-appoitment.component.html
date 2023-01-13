@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <label for="patientName">Patient Name : </label><input type="text" placeholder="Enter patient name" />
+    </div><br />
+    <div>
+        <label for="patientMobNum">Patient Mobile Number : </label>
+        <input type="text" placeholder="Enter patient mobile number" />
+    </div>
+    <br />
+    <div>
+        <label for="doctor">Select Doctor : </label>
+        <select title="Select doctor" (change)="selectDoctorDetails($event)">
+            <option value="null">--Select doctor--</option>
+            <option *ngFor="let data of doctorList;" [value]="data.doctorId">{{data.doctorName}}
+            </option>
+        </select>
+    </div><br />
+</div>

@@ -1,0 +1,17 @@
+<p>view-appoitment works!</p>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient Mobile No.</th>
+        <th>Doctor Name</th>
+        <th>Doctor Specification</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let appList of appoitmentList;index as i">
+        <td>{{appList?.appoitmentDetails?.patientName}}</td>
+        <td>{{appList?.appoitmentDetails?.patientMobileNo}}</td>
+        <td>{{appList?.doctorName}}</td>
+        <td>{{appList?.doctorSpec}}</td>
+        <td><button> Edit </button></td>
+    </tr>
+</table>
